@@ -89,8 +89,6 @@ exportHandler('openMenu', function(data, _)
     lib.registerContext(menu)
     lib.showContext(menu.id)
 end)
-
--- lib.hideContext(onExit?: boolean) — new ox_lib accepts optional boolean
 exportHandler('closeMenu', function()
     lib.hideContext(false)
 end)

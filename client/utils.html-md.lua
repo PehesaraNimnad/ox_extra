@@ -1,3 +1,4 @@
+-- ### HTML TEXT CONVERTION ### --
 local html = {
     -- start tags
     ['<h1>'] = '#',

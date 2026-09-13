@@ -1,3 +1,4 @@
+-- ### QB-TARGET TO OX_TARGET COMPAT ### --
 if not Config.Modules['qb-target'].active then return end
 local function exportHandler(exportName, func)
     AddEventHandler(('__cfx_export_%s_%s'):format(Config.Modules['qb-target'].resource_name, exportName), function(setCB)
@@ -14,6 +15,7 @@ local function convert(options)
     local distance = options.distance
     options = options.options
 
+    -- People may pass options as a hashmap (or mixed, even)
     for k, v in pairs(options) do
         if type(k) ~= 'number' then
             table.insert(options, v)

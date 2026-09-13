@@ -158,7 +158,6 @@ exportHandler('ShowInput', function(data)
 
     local returnData = {}
     for k, v in pairs(selections) do
-        
         if type(v) == 'table' and table.type(v) == 'array' then
             returnData[names[k]] = tostring(v[1])
         else
